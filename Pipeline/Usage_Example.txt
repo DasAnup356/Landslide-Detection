@@ -1,0 +1,1 @@
+python pipeline.py --ref_image reference.png --def_image deformed.png --model_path rf_model.joblib --output_dir ./output

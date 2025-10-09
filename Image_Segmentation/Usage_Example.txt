@@ -1,0 +1,10 @@
+#Prediction
+1) python rf_predict.py --image_in input.jpg --model_in rf_model.joblib --mask_out ./output/mask.png --target_patches 3500 --proba_thresh 0.6 --remove_small_param 100
+
+2) python refine_mask.py --mask ./output/mask.png --image reference.png --mask_out_path ./output/refined_mask.png --overlay_out_path ./output/overlay.png
+
+3) python overlay_boundaries.py --mask ./output/mask.png --image ../Test_Images/1.png --out_path ./output/overlay.png
+
+
+#Traning
+python rf_train.py --mode train --csv ./Dataset/train.csv --patches_folder ./Dataset/Patches --model_out ./rf_model.joblib
